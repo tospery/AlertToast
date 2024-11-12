@@ -28,7 +28,11 @@ struct ActivityIndicator: NSViewRepresentable {
 @available(iOS 13, *)
 struct ActivityIndicator: UIViewRepresentable {
     
-    var color: Color
+    let color: Color
+    
+    init(color: Color) {
+        self.color = color
+    }
 
     func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
         
