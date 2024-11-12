@@ -1,0 +1,16 @@
+PODS:
+  - AlertToast-Hi (0.1.0)
+
+DEPENDENCIES:
+  - AlertToast-Hi (from `../`)
+
+EXTERNAL SOURCES:
+  AlertToast-Hi:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AlertToast-Hi: 4791dd802bd6ef8a3e78924f90911689f7b99dfb
+
+PODFILE CHECKSUM: 746278d2f1cf772facaaaf92c987fbaa0abf38c0
+
+COCOAPODS: 1.15.2

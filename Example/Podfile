@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'AlertToast-Hi_Example' do
+  pod 'AlertToast-Hi', :path => '../'
+
+  target 'AlertToast-Hi_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
