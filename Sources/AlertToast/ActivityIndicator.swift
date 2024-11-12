@@ -11,6 +11,12 @@ import SwiftUI
 @available(macOS 11, *)
 struct ActivityIndicator: NSViewRepresentable {
     
+    let color: Color
+    
+    init(color: Color) {
+        self.color = color
+    }
+    
     func makeNSView(context: NSViewRepresentableContext<ActivityIndicator>) -> NSProgressIndicator {
         let nsView = NSProgressIndicator()
         
