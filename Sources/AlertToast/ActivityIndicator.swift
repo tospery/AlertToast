@@ -27,10 +27,22 @@ struct ActivityIndicator: NSViewRepresentable {
 #else
 @available(iOS 13, *)
 struct ActivityIndicator: UIViewRepresentable {
+    
+    var color: Color
 
     func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
         
         let progressView = UIActivityIndicatorView(style: .large)
+        if #available(iOS 14.0, *) {
+            if let cgColor = color.cgColor?.copy() {
+                progressView.color = UIColor(cgColor: cgColor)
+            }
+        } else {
+            let uiHostingController = UIHostingController(rootView: color)
+            if let cgColor = uiHostingController.view.backgroundColor?.cgColor.copy() {
+                progressView.color = UIColor(cgColor: cgColor)
+            }
+        }
         progressView.startAnimating()
         
         return progressView

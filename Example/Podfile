@@ -1,13 +1,17 @@
-use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '10.0'
+platform :ios, '16.0'
+use_frameworks!
 
 target 'AlertToast-Hi_Example' do
   pod 'AlertToast-Hi', :path => '../'
 
-  target 'AlertToast-Hi_Tests' do
-    inherit! :search_paths
+end
 
-    
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
+    end
   end
 end
