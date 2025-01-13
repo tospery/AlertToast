@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AlertToast-Hi'
-  s.version          = '1.3.9-v1'
+  s.version          = '1.3.9.1'
   s.summary          = 'Create Apple-like alerts & toasts using SwiftUI'
   s.description  = "Alert Toast is an open-source library in Github to use with SwiftUI. It allows you to present popups that don't need any user action to dismiss or to validate. Some great usage examples: Message Sent, Poor Network Connection, Profile Updated, Logged In/Out, Favorited, Loading and so on..."
   s.homepage         = 'https://github.com/tospery/AlertToast'
